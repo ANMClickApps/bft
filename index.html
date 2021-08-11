@@ -1,0 +1,568 @@
+<!--<?php
+#client-side
+define('SITE_KEY','6Ld505cUAAAAANLojJeb3RQ12Ok5Nab4tIlTcYJY');
+
+#server-side
+define('SECRET_KEY','6Ld505cUAAAAAL8o2R9_E7s3BATppp9egCuZQv3V');
+
+if($_POST){
+    function getCaptcha($SecretKey){
+        $Response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".SECRET_KEY."&response={$SecretKey}");
+        $Return = json_decode($Response);
+        return $Return;
+    }
+    $Return = getCaptcha($_POST['g-recaptcha-response']);
+    //var_dump($Return);
+    if($Return->success == true && $Return->score > 0.5){
+        echo "Succes!";
+    }else{
+        echo "You are a Robot!!";
+    }
+}
+
+
+if($_SERVER[‘REQUEST_URI’] == "/index.php") {
+
+header("Location: /",TRUE,301);
+exit();
+} ?>-->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>Bft-Plus Store автоматика для разных типов ворот</title>
+<meta content="автоматика для ворот,автоматика BFT,автоматика для распашных ворот,автоматика для откатных ворот,автоматика для гаражных ворот, автоматика для промышленных ворот, автоматические шлагбаумы,дорожные блокираторы,болларды,выдвижные столбы" name="keywords">
+<meta content="Автоматика для разных типов ворот (распашные, гаражные, промышленные), автоматические шлагабумы марки BFT, Украина, Киев, ул. Бориспольская 4,  офис 2,  установка с гарантией, опыт более 10 лет" name="description">
+<meta name="robots" content="index,follow">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:400,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" crossorigin="anonymous" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<!-- <link href="index.php" rel="canonical"> -->
+<link rel="icon" href="favicon.ico">
+
+
+</head>
+<body>
+<header id="header" class="header">
+    <img class="bg-img-r-top" src="img/bg_section_main.png" alt="background main">
+    <div class="container">
+        <div class="row">
+            <div class="header-content">
+                <div class="box-logo">
+                    <a id="logo-top" class="logo-img" href="#main"><img src="img/logo.png" alt="logo ft-plus store"></a>
+                    <p class="logo-title">bft-<br>plus store</p>
+                </div>
+                    <a id="phone-link" class="phone-link wow tada" href="tel:+380972044140" data-wow-duration="2s" data-wow-delay="5s" data-wow-iteration="3">+380 97 204 4140</a>
+                <form action="#footer-form" class="btn-header">
+                    <button type="submit"  class="btn">
+                        получить консультацию
+                    </button>
+                </form>
+
+        </div>
+    </div>
+    </div>
+</header>
+<section id="main" class="main">
+
+    <div class="container">
+        <div class="row">
+            <div class="main-content">
+
+                    <h1 id="main-title" class="main-title  wow bounceInUp">автоматика для разных<br>типов ворот</h1>
+                    <span class="main-text">экономия человеческих усилий и времени</span>
+                    <p id="price-main" class="price-main">Стоимость работ<br> от <strong class="sum">400</strong> грн</p>
+                    <span class="text-action">оплата по факту</span>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="feature" class="feature">
+    <div class="container">
+        <div class="row">
+            <h2 class="feature-title wow bounceInRight">
+                Приемущества работы с нами
+            </h2>
+            <div class="feature-content wow bounceInUp">
+                <div class="item">
+                    <div class="item-img">
+                        <img class="img-xs" src="img/ic-feature-coin.png" alt="icon платите по факту">
+                    </div>
+                    <div class="item-text">
+                        <span class="item-title">Платите по факту</span>
+                        <p>Вы оплачиваете выполнение работы только
+                            после их выполнения. Никаких скрытых доплат
+                            и промежуточных платежей.</p>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <img class="img-xs" src="img/ic-feature-clock.png" alt="точно в строк">
+                    </div>
+                    <div class="item-text">
+                        <span class="item-title">Точно в строк</span>
+                        <p>Работаем строго по установленным строкам,
+                            которые прописаны в договоре. Если не
+                            успеваем, Вы платите меньше.</p>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <img class="img-xs" src="img/ic-feature-open-doc.png" alt="заключение договора">
+                    </div>
+                    <div class="item-text">
+                        <span class="item-title">Заключаем договор</span>
+                        <p>Перед началом работ заключаем договор на
+                            юридическое лицо. Вы можете быть уверены,
+                            что все обязательства будут выполнены.</p>
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="item-img">
+                        <img class="img-xs" src="img/ic-feature-piggy-bank.png" alt="экономите на материалах">
+                    </div>
+                    <div class="item-text">
+                        <span class="item-title">Экономите на материалах</span>
+                        <p>Мы используем качественные материалы
+                            извесных брендов.
+                            Даём Вам самые выгодные цены.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="price" class="price">
+    <img class="bg-img-l" src="img/bg3.png" alt="секция цена">
+    <div class="container">
+        <div class="row">
+         <div class="price-header">
+             <h2 class="price-title wow bounceInRight">
+                 Цена
+             </h2>
+             <p class="p-gray wow bounceInLeft">Выберите вариант, который подходит Вам:</p>
+         </div>
+
+        </div>
+        <div class="row"><!--Карточки цены-->
+            <div class="item-price-box">
+                <!--Вариант 1-->
+                <div class="item-price wow bounceInLeft">
+                    <div class="price-cart">
+                        <div class="price-cart-item">
+                            <div class="cart-img">
+                                <img class="cart-pic" src="img/montaznik.png" alt="замерщик">
+                                <form action="#footer-form">
+                                    <button class="btn cart-btn">заказать</button>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-price-info">
+                        <p class="price-label">Выезд замерщика<br>
+                            и консультация профессионала</p>
+                        <span class="price-start">от <strong>400</strong> грн</span>
+                    </div>
+                    <div class="cart-feature">
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Проведение замеров</p>
+                        </div>
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Профессиональная конслультация</p>
+                        </div>
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Представления схемы (чертежа)</p>
+                        </div>
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Определения стоимости работ</p>
+                        </div>
+                    </div>
+                </div>
+                <!--Вариант 2-->
+                <div class="item-price wow bounceInRight">
+                    <div class="price-cart">
+                        <div class="price-cart-item">
+                            <div class="cart-img">
+                                <img class="cart-pic-two" src="img/cart2.png" alt="под ключ">
+                                <form action="#footer-form">
+                                    <button class="btn cart-btn">заказать</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-price-info">
+                        <p class="price-label">Монтаж и установка<br>
+                            автоматики для ворот</p>
+                        <span class="price-start">от <strong>1600</strong> грн</span>
+                    </div>
+                    <div class="cart-feature">
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Завоз материалов</p>
+                        </div>
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Монтаж</p>
+                        </div>
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Установка</p>
+                        </div>
+                        <div class="cart-feature-item">
+                            <i class="fas fa-check cart-check"></i>
+                            <p>Гарантия от 1 до 5 лет</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--КНЦ строки карточки цены-->
+    </div>
+</section>
+<section id="plan-work" class="plan-work">
+    <img class="bg-img-r bg-plan" src="img/bg-plan-sketch.png" alt="bg section plan">
+    <div class="container">
+        <div class="row">
+            <div class="plan-work-header wow bounceInUp">
+                <h2 class="plan-title wow bounceInUp">
+                    Схема работы
+                </h2>
+                <p class="p-gray wow bounceInLeft">Работа над вашим объектом будет включать в себя следующие этапы:</p>
+            </div>
+        </div>
+        <div class="row wow slideInRight">
+            <div class="plan-content">
+                <div class="plan-content-item">
+                        <div class="plan-item-img">
+                            <img class="img-xs" src="img/email.png" alt="заявка">
+                        </div>
+                        <div class="plan-item-text">
+                            <span class="plan-item-title">Заявка</span>
+                            <p>Оставляете онлайн заявку или звоните<br>+380 97 204 4140</p>
+                        </div>
+                </div>
+                <div class="plan-content-item">
+                    <div class="plan-item-img">
+                        <img class="img-xs" src="img/logistics-delivery-truck-in-movement.png" alt="Выезд специалиста">
+                    </div>
+                    <div class="plan-item-text">
+                        <span class="plan-item-title">Выезд специалиста</span>
+                        <p>В течении 1 рабочего дня к Вам приезжает специалист,
+                            который выполнит замеры для точной стоимости работ</p>
+                    </div>
+                </div>
+                <div class="plan-content-item">
+                    <div class="plan-item-img">
+                        <img class="img-xs" src="img/diploma.png" alt="Составления договора">
+                    </div>
+                    <div class="plan-item-text">
+                        <span class="plan-item-title">Составления договора</span>
+                        <p>Готовим договор и согласовываем с Вами</p>
+                    </div>
+                </div>
+                <div class="plan-content-item">
+                    <div class="plan-item-img">
+                        <img class="img-xs" src="img/play-button.png" alt="Начало работ">
+                    </div>
+                    <div class="plan-item-text">
+                        <span class="plan-item-title">Начало работ</span>
+                        <p>Доставляем материалы, оборудование, подписываем
+                            договор и начинаем работы</p>
+                    </div>
+                </div>
+                <div class="plan-content-item">
+                    <div class="plan-item-img">
+                        <img class="img-xs" src="img/finish-flag.png" alt="Завершение работ">
+                    </div>
+                    <div class="plan-item-text">
+                        <span class="plan-item-title">Завершение работ</span>
+                        <p>После окончания работ Вы проверяете качество и
+                            подписываете акт сдачи, производите оплату.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="warranty" class="warranty">
+    <div class="container">
+        <div class="row">
+            <div class="warranty-header">
+                <h2 class="wow rotateIn">Все на 100% включено!</h2>
+                <p class="p-gray wow bounceInLeft">При выполнении работ с нашим материалом в стоимость входит:</p>
+            </div>
+        </div>
+        <div class="row wow slideInLeft">
+            <div class="warranty-content">
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">1.</div>
+                    </div>
+                    <p>Материал: автоматика,<br>расходный материал</p>
+
+                    </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">2.</div>
+                    </div>
+                    <p>Доставка оборудования и<br>материалов на объект</p>
+
+                </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">3.</div>
+                    </div>
+                    <p>Подготовка места<br>установки</p>
+
+                </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">4.</div>
+                    </div>
+                    <p>Монтажные работы,<br> установка</p>
+
+                </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">5.</div>
+                    </div>
+                    <p>Очистка, грунтовка,<br>покараска поверхности</p>
+
+                </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">6.</div>
+                    </div>
+                    <p>Настройка, регулировка<br>механизма</p>
+
+                </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">7.</div>
+                    </div>
+                    <p>Уборка объекта,<br> вывоз мусора</p>
+
+                </div>
+                <div class="warranty-content-item">
+                    <div class="circle">
+                        <div class="circle-big"></div>
+                        <div class="circle-small"></div>
+                        <div class="circle-text">8.</div>
+                    </div>
+                    <p>Здача выполненой<br>работы заказчику</p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="problem" class="problem">
+    <div class="container">
+        <div class="row">
+            <div class="problem-header">
+                <h2 class="wow bounceInUp">Мы развеем все опасения</h2>
+            </div>
+        </div>
+        <div class="row wow bounceInUp">
+            <div class="problem-content">
+
+                    <div class="problem-item probl-color">
+                        <h2 class="prob-title">Какие могут быть проблемы,<br>
+                            если работу выполнять<br>
+                            самостоятельно:</h2>
+                        <p class="prob-text">- Некоректная работа механизма ворот,
+                            которая призведет до уменьшения строка
+                            эксплуатации всех механизмов.<br><br>
+                            - Ремонт затянется на долгое время.<br><br>
+                            - Сложности с доставкой и разгрузкой
+                            материалов.<br><br>
+                            - Отсутствие гарантии на установку.<br><br>
+                            - Останется мусор после работ.</p>
+                    </div>
+                <div class="problem-item prob-item-sec">
+                    <h2 class="prob-title">Наши решение:</h2>
+                    <p class="prob-text">- Высокая квалификация специалистов,
+                        минимум 10 летный опыт работы.<br><br>
+                        - Соблюдаем строки, которые прописаны
+                        в договоре.<br><br>
+                        - Доставка материалов бесплатно.<br><br>
+                        - Гарантия на установку, а также на
+                        автоматику от 1 до 5 лет.<br><br>
+                        - Убираем и вывозим мусор после работ.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="material" class="material">
+    <div class="container">
+        <div class="row">
+            <div class="material-header">
+                <h2>Мы работаем только качественными, проверенными временем материалами:</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pricelist wow bounceInLeft " >
+                <div class="material-lable wow tada" data-wow-delay="2s" data-wow-duration="2s" data-wow-iteration="7">
+                    <img class="bft-logo" src="img/bft-logo-.png" alt="bft logo">
+                    <a class="download-pricelist" href="#">Прайс-лист продукции BFT</a>
+                </div>
+                <p class="made-italy"> "Made in Italy" - это знак защиты и одновременно обозначение постоянного контроля.</p>
+            </div>
+        </div>
+        <div class="row">
+            <small>*также Вы можете преобрести материалы по оптовым ценам по телефону +380 97 204 4140</small>
+        </div>
+    </div>
+</section>
+<section id="yousee" class="yousee">
+    <div class="container">
+        <div class="row">
+            <div class="yousee-content">
+                <div class="yousee-content-header wow bounceInRight">
+                    <h2>посмотрите<br>как мы работаем</h2>
+                    <p>Хотите удостовериться в профессионализме наших сотрудников?<br><br>
+                        Вы можете сделать это, приехав на один из наших объектов,<br>
+                        и понаблюдав за ходом работ. Увидите оборудование, материалы<br>
+                        и качество исполнения.</p>
+                </div>
+                <form action="mail_min.php" method="POST" class="form wow bounceInUp">
+                    <p class="form-title">Оставьте контактные данные<br> для связи</p>
+                    <input type="text" name="user_name_see" placeholder="Ваше имя" required>
+                    <input type="tel" name="user_phone_see" placeholder="+380972044140" pattern="(\+?\d[- .]*){7,13}" required>
+                    <button type="submit" class="btn form-btn">записаться на просмотр</button>
+                    <small>Подберем ближайший к вам объект</small>
+
+                </form>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="add-work" class="add-work">
+    <div class="container">
+        <div class="row wow bounceInLeft">
+            <div class="add-work-header">
+                <h2>Дополнительные услуги</h2>
+                <p class="p-gray">Помимо установки автоматики Вы можете заказать у нас слудующие услуги:</p>
+            </div>
+        </div>
+        <div class="row wow bounceInRight">
+            <div class="add-work-content">
+                <div class="add-work-content-item">
+                    <img class="img-xs" src="img/add_work-tool-box.png" alt="Ремонт автоматики">
+                    <span>Ремонт автоматики</span>
+                </div>
+                <div class="add-work-content-item">
+                    <img class="img-xs" src="img/add-work-02.png" alt="Обслуживание узлов механизма">
+                    <span>Обслуживание узлов механизма</span>
+                </div>
+                <div class="add-work-content-item">
+                    <img class="img-xs" src="img/add-work03.png" alt="Сварочные работы">
+                    <span>Сварочные работы</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer id="footer" class="footer wow bounceInUp">
+    <div class="container">
+        <div class="row">
+            <div class="footer-content">
+                <div class="footer-content-header">
+                    <h2>Контакты</h2>
+                    <div class="footer-item">
+                        <p class="p-gray">Адрес офиса:</p>
+                        <span>Украина, г. Киев, ул. Бориспольская 4, офис 2</span>
+                    </div>
+                    <div class="footer-item">
+                        <p class="p-gray">Номер телефона:</p>
+                        <span>+380 97 204 4140</span>
+                    </div>
+                    <div class="footer-item">
+                        <p class="p-gray">e-mail:</p>
+                        <span>admin@bft-plus.store</span>
+                    </div>
+                    <p class="plan-working-day">График работ:<br>
+                        Пн-Пт: с 09:00 до 18:00<br>
+                        Сб,Вс: дежурный режим</p>
+
+                    <div class="box-logo footer-logo">
+                        <a class="logo-img" href="#header"><img src="img/logo.png" alt="logo ft-plus store"></a>
+                        <p class="logo-title">bft-<br>plus store</p>
+                    </div>
+                </div>
+
+                <form action="mail.php" method="POST" id="footer-form" class="form footer-form">
+                    <p class="form-title">Оставьте контактные данные<br> для связи</p>
+                    <input type="text" name="user_name" placeholder="Ваше имя" required>
+                    <input type="tel" name="user_phone" placeholder="+380972044140" pattern="(\+?\d[- .]*){7,13}" required>
+                    <input type="email" name="user_email" placeholder="e-mail">
+                    <textarea class="footer-form-message" name="user_message" cols="40" rows="6" placeholder="Текст сообщения..."></textarea>
+                   <!-- <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">-->
+                    <button type="submit" class="btn form-btn footer-form-btn">получить консультацию</button>
+
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="devel-wrap">
+                <div class="developer">
+                    <a href="https://www.facebook.com/nadyanfrans" title="web design -> Надежда Французова"><p class="developer-together">Together with</p>
+                        <p class="developer-title">anmclick</p></a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+<!--<script >
+    grecaptcha.ready(function() {
+    grecaptcha.execute('<?php echo SITE_KEY; ?>', {action: 'homepage'})
+    .then(function(token) {
+        //console.log(token);
+        document.getElementById('g-recaptcha-response').value=token;
+    });
+    });
+</script>-->
+</body>
+</html>
